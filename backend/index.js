@@ -5,6 +5,10 @@ import { Book } from "./models/bookModel.js";
 
 const app = express();
 
+//middleware for parsaing request body
+app.use(express.json());
+
+
 app.get("/", (req, res) => {
   console.log(req);
   return res.status(234).send("Hello MERN");
